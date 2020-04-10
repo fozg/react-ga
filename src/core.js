@@ -18,7 +18,7 @@ import warn from './utils/console/warn';
 import log from './utils/console/log';
 import TestModeAPI from './utils/testModeAPI';
 
-const _isNotBrowser = typeof window === 'undefined' || typeof document === 'undefined';
+const _isNotBrowser = !(window !== 'undefined' && document !== 'undefined');
 
 let _debug = false;
 let _titleCase = true;
